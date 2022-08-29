@@ -1,4 +1,4 @@
-#https://kirillgenin.github.io/codejam-eldritch/
+https://kirillgenin.github.io/codejam-eldritch/
 
 # Eldritch Horror Codejam
 
