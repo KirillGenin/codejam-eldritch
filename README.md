@@ -1,3 +1,5 @@
+https://kirillgenin.github.io/codejam-eldritch/
+
 # Eldritch Horror Codejam
 
 ## Описание проекта
