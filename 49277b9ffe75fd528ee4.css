@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    height: 100vh;
+    font-family: 'Grenze Gotisch', cursive;
+    font-weight: 400;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#bg-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/background.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.ancients {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ancients__list {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    list-style: none;
+}
+
+.ancients__item {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 15px;
+    border: 1px solid rgb(184, 176, 176);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.ancients__item:hover,
+.ancients__item:focus {
+    border-bottom: 1px solid transparent;
+}
+
+.ancients__item-active {
+    border-bottom: 1px solid transparent;
+    transform: scaleY(1.1);
+}
+
+.ancients__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 570px;
+    font-size: 350px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    background-image: url(./assets/AncientsCardBackground.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 20px rgb(0, 0, 0)) grayscale(1);
+}
+
+/* animation: sc 2s infinite; */
+@keyframes sc {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 0.95;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.shuffle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0 0 20%;
+    gap: 20px;
+}
+
+.level__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    list-style: none;
+}
+
+.level__item {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.level__item:hover {
+    list-style: disc;
+    opacity: 0.8;
+}
+
+.level__item-active {
+    list-style: disc;
+    text-decoration: underline;
+}
+
+.button-shuffle {
+    animation: sc 1s infinite;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid rgb(184, 176, 176);
+    border-radius: 5px;
+    font-size: 20px;
+    transition: animation 0.2s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(216, 216, 193, 0.2);
+}
+
+.card-container {
+    width: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-wrapper {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 200px;
+}
+
+.current-card {
+    flex-basis: 250px;
+    height: 220px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.show-card {
+    flex-basis: 250px;
+    height: 220px;
+    background-image: url(./assets/mythicCardBackground.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: sc 1s infinite;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.brown {
+    background-color: rgb(160, 136, 29);
+}
+
+.green {
+    background-color: green;
+}
+
+.tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgb(184, 176, 176);
+    border-radius: 10px;
+    background-color: rgba(216, 216, 193, 0.3);
+    padding: 15px;
+    width: fit-content;
+}
+
+.tracker__stage {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.complite {
+    filter: grayscale(1) opacity(0.5);
+}
+
+.history__list-item {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    animation: createLi 0.5s;
+}
+
+@keyframes createLi {
+    0% {
+        color: transparent;
+    }
+
+    20% {
+        color: transparent;
+    }
+
+    90% {
+        color: rgb(105, 127, 189);
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.history__list-info {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.tracker__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+}
+
+.hidden {
+    opacity: 1;
+    visibility: hidden;
+}

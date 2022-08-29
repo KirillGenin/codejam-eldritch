@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Eldritch Horror Codejam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="49277b9ffe75fd528ee4.css">
+    <script defer="defer" src="index.9d6adc04ae6db55e3719.js"></script>
+</head>
+
+<body>
+    <div class="ancients">
+        <div class="title">Выберите карту Древнего</div>
+        <ul id="menu-ancients" class="ancients__list">
+            <li id="azathoth" class="ancients__item">Азатот</li>
+            <li id="cthulhu" class="ancients__item">Ктулху</li>
+            <li id="iogSothoth" class="ancients__item">Йог-Сотот</li>
+            <li id="shubNiggurath" class="ancients__item">Шуб-Ниггурат</li>
+        </ul>
+        <div class="ancients__img">?</div>
+    </div>
+    <div class="shuffle hidden">
+        <div class="title">Сложность:</div>
+        <ul id="menu-level" class="level__list"></ul>
+        <div class="level-info"></div>
+        <div id="shuffle" class="button button-shuffle hidden">Перемешать</div>
+    </div>
+    <div class="card-container hidden">
+        <div class="tracker">
+            <div class="tracker__stage">
+                <div class="tracker__stage-name">Первый этап</div>
+                <div id="stage-one-green" class="tracker__card green"></div>
+                <div id="stage-one-brown" class="tracker__card brown"></div>
+                <div id="stage-one-blue" class="tracker__card blue"></div>
+            </div>
+            <div class="tracker__stage">
+                <div class="tracker__stage-name">Второй этап</div>
+                <div id="stage-two-green" class="tracker__card green"></div>
+                <div id="stage-two-brown" class="tracker__card brown"></div>
+                <div id="stage-two-blue" class="tracker__card blue"></div>
+            </div>
+            <div class="tracker__stage">
+                <div class="tracker__stage-name">Третий этап</div>
+                <div id="stage-three-green" class="tracker__card green"></div>
+                <div id="stage-three-brown" class="tracker__card brown"></div>
+                <div id="stage-three-blue" class="tracker__card blue"></div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div id="show-card" class="show-card"></div>
+            <div id="current-card" class="current-card"></div>
+        </div>
+    </div>
+    <div class="history hidden">
+        <div class="title">Вытянутые карты:</div>
+        <ul class="history__list"></ul>
+    </div><canvas id="bg-img"></canvas>
+</body>
+
+</html>
